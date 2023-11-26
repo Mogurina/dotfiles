@@ -10,7 +10,6 @@
 
 
 call plug#begin('~/.vim/plugged')
-
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
 Plug 'https://github.com/preservim/nerdtree' " NerdTree
 Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
@@ -31,9 +30,9 @@ call plug#end()
 
 inoremap jk <ESC>
 
-noremap <C-f> :NERDTreeFocus<CR>
+noremap <C-t> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeToggle<CR>
 
 
 nmap <C-g> :TagbarToggle<CR>
