@@ -48,9 +48,8 @@ plugins = require('plugins')
 require('lazy').setup(plugins)
 
 
-
-
-
+--color
+vim.cmd[[colorscheme tokyonight]]
 
 
 --telescope
@@ -77,7 +76,6 @@ require("telescope").setup {
         layout_strategy = 'vertical'
     }
 }
-
 
 -- coc settings
 local opts = {silent = true, noremap = true, expr = true, replace_keycodes = false}
