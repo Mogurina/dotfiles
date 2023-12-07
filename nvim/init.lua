@@ -14,6 +14,7 @@ vim.opt.clipboard = 'unnamedplus' --クリップボードとレジスタを共�
 vim.opt.helplang = 'ja', 'en'
 vim.opt.swapfile = false --スワップファイルを生成しない
 vim.opt.wrap = true --端までコードが届いた際に折り返す
+vim.opt.termguicolors = true
 
 
 --keymap
@@ -42,9 +43,7 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-
 plugins = require('plugins')
-
 require('lazy').setup(plugins)
 
 
@@ -77,7 +76,30 @@ require("telescope").setup {
     }
 }
 
+
 -- coc settings
 local opts = {silent = true, noremap = true, expr = true, replace_keycodes = false}
 vim.keymap.set("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : "<Tab>"', opts)
 vim.keymap.set("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "<C-h>"]], opts)
+
+
+--treesitter settings
+local status, treesitter = pcall(require, "nvim-treesitter.configs")
+if (not status) then return end
+
+treesitter.setup {
+-- ここでハイライトしたい言語を指定しておくと、起動時にインストールされます
+  ensure_installed = {"python","vim","dockerfile","fish","typescript","tsx","javascript","json","lua","gitignore","bash","astro","markdown","css","scss","yaml","toml","vue","php","html"},
+  highlight = {
+    enable = true, -- ハイライトを有効化
+    additional_vim_regex_highlighting = false, -- catpuucin用
+    disable = {},
+  },
+　indent ={
+　　enable =true,--言語に応じた自動インデントを有効化
+  　disable ={"html"},-- htmlのインデントだけ無効化
+　},
+  autotag = {
+    enable = true,
+  },
+}
