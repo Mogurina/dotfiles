@@ -20,6 +20,7 @@ vim.opt.termguicolors = true
 --keymap
 local keymap = vim.keymap
 keymap.set('i','jk','<ESC>')
+keymap.set('v','jk','<ESC>')
 
 -- 画面分割
 keymap.set('n', 'ss', ':split<Return><C-w>w')
