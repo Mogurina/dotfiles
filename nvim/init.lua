@@ -112,3 +112,24 @@ treesitter.setup {
     enable = true,
   },
 }
+
+--nvim-tree setting
+require("nvim-tree").setup({
+  sort = {
+    sorter = "case_sensitive",
+  },
+  view = {
+    width = 30,
+  },
+  renderer = {
+    group_empty = true,
+  },
+  filters = {
+    dotfiles = true,
+  },
+})
+
+-- start neovim with open nvim-tree
+require("nvim-tree.api").tree.toggle(false, true)
+vim.api.nvim_set_keymap('n', 'F', ':NvimTreeToggle<CR>', {silent=true})
+
