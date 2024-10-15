@@ -1,9 +1,9 @@
 -- encoding
-vim.o.encofing = 'utf-8'
+vim.o.encoding = 'utf-8'
 vim.scriptencoding = 'utf-8'
 
 vim.opt.number = true
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 vim.opt.autoindent = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
@@ -21,10 +21,18 @@ vim.opt.termguicolors = true
 local keymap = vim.keymap
 keymap.set('i','jk','<ESC>')
 keymap.set('v','jk','<ESC>')
+keymap.set('t','jk','<C-\\><C-n>')
+
+keymap.set('n','tt','<cmd>belowright new<CR><cmd>terminal<CR>',{silent=true})
+keymap.set('n','tx','<cmd>terminal<CR>',{silent=true})
+vim.cmd('autocmd TermOpen * :startinsert')
+vim.cmd('autocmd TermOpen * setlocal norelativenumber')
+vim.cmd('autocmd TermOpen * setlocal nonumber')
+
 
 -- 画面分割
-keymap.set('n', 'ss', ':split<Return><C-w>w')
-keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
+keymap.set('n', 'sv', ':split<Return><C-w>w')
+keymap.set('n', 'ss', ':vsplit<Return><C-w>w')
 -- アクティブウィンドウの移動
 keymap.set('n', 'sh', '<C-w>h')
 keymap.set('n', 'sk', '<C-w>k')
