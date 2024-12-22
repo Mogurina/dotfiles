@@ -8,7 +8,7 @@ return {
 
 		treesitter.setup {
 		-- ここでハイライトしたい言語を指定しておくと、起動時にインストールされます
-		  ensure_installed = {"python","vim","dockerfile","fish","typescript","tsx","javascript","json","lua","gitignore","bash","astro","markdown","css","scss","yaml","toml","vue","php","html"},
+		  ensure_installed = {"go","python","vim","dockerfile","fish","typescript","tsx","javascript","json","lua","gitignore","bash","astro","markdown","css","scss","yaml","toml","vue","php","html"},
 		  highlight = {
 			enable = true, -- ハイライトを有効化
 			additional_vim_regex_highlighting = false, -- catpuucin用
