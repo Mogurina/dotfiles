@@ -25,6 +25,8 @@ local neovim_plugins = {
 	require("plugins.coc"),--補完機能
 	require("plugins.tokyonight"),--カラーテーマ
 	require("plugins.nvim-tree"),
+	require("plugins.emmet"),
+	require("plugins.highlight-colors")
 }
 
 require('lazy').setup(neovim_plugins)
