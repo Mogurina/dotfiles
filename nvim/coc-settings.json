@@ -1,5 +1,6 @@
 {
   "suggest.noselect": true, 
-  "jedi.executable.commnd":"jedi-language-server"
+  "jedi.executable.commnd":"jedi-language-server",
+  "css.lint.unknownAtRules": "ignore",
 }
 
