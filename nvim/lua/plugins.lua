@@ -30,7 +30,8 @@ local neovim_plugins = {
 	require("plugins.nvim-notify"),
 	require("plugins.noice"),
 	require("plugins.cyberdream"),
-	require("plugins.catppuccin")
+	require("plugins.catppuccin"),
+	require("plugins.toggleterm"),
 }
 
 require('lazy').setup(neovim_plugins)
