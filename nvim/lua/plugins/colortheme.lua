@@ -6,7 +6,7 @@ return {
 		opts = {},
 		config = function()
 			require("solarized-osaka").setup({
-				transparent = true,
+				transparent = false,
 				terminal_colors = true,
 				style = {
 					comments = {italic = true},
@@ -16,11 +16,13 @@ return {
 					sidebars = "dark",
 					floats = "dark",
 				},
-				sidebars = {"qf","help"},
+				sidebars = {"qf"},
 				day_brightness = 0.3,
 				hide_inactive_statusline = false,
 				dim_inactive = false,
-				lualine_bold = false,
+				lualine_bold = true,
+
+
 			})
 		end,
 	},
