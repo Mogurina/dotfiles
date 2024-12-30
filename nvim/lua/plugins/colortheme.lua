@@ -21,8 +21,6 @@ return {
 				hide_inactive_statusline = false,
 				dim_inactive = false,
 				lualine_bold = true,
-
-
 			})
 		end,
 	},
@@ -34,7 +32,6 @@ return {
 		},
 	},
 	{
-
 		"catppuccin/nvim",
 		name = "catppuccin",
 		priority = 1000 ,
