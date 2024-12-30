@@ -1,6 +1,6 @@
 --keymap
 local keymap = vim.keymap
-keymap.set('i','<leader>jk','<ESC>')
+keymap.set('i','jk','<ESC>')
 keymap.set('v','<leader>jk','<ESC>')
 keymap.set('t','<leader>jk','<C-\\><C-n>')
 
