@@ -29,6 +29,8 @@ local neovim_plugins = {
 	require("plugins.highlight-colors"),
 	require("plugins.nvim-notify"),
 	require("plugins.noice"),
+	require("plugins.cyberdream"),
+	require("plugins.catppuccin")
 }
 
 require('lazy').setup(neovim_plugins)
