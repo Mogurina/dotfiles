@@ -19,7 +19,7 @@ return {
 		  },
 		})
 		vim.api.nvim_set_keymap(
-		'n', 'F', ':NvimTreeToggle<CR>',
+		'n', '<leader>f', ':NvimTreeToggle<CR>',
 		{silent=true}
 		)
 	end,
