@@ -22,16 +22,14 @@ local neovim_plugins = {
 	require("plugins.telescope-fzf"),--telescope
 	require("plugins.plenary"),--telescope
 	require("plugins.treesitter"),--シンタックスハイライト関係
-	require("plugins.tokyonight"),--カラーテーマ
 	require("plugins.nvim-tree"),
 	require("plugins.emmet"),
 	require("plugins.highlight-colors"),
 	require("plugins.nvim-notify"),
 	require("plugins.noice"),
-	require("plugins.cyberdream"),
-	require("plugins.catppuccin"),
 	require("plugins.toggleterm"),
 	require("plugins.autocmp"),--補完機能
+	require("plugins.colortheme")
 }
 
 require('lazy').setup(neovim_plugins)
