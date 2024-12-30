@@ -27,7 +27,8 @@ return {
 					i = { ["<esc>"] = actions.close },
 					n = { ["q"] = actions.close },
 				},
-				layout_strategy = 'vertical'
+				--layout_strategy = 'vertical'
+				layout_strategy = 'horizontal'
 			}
 		}
 	end

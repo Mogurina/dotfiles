@@ -2,9 +2,12 @@
 vim.o.encoding = 'utf-8'
 vim.scriptencoding = 'utf-8'
 
+vim.g.mapleader = " "
 vim.opt.number = true
+vim.opt.title = true
 vim.opt.relativenumber = false
 vim.opt.autoindent = true
+vim.opt.smartindent = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.smarttab = true
@@ -15,6 +18,8 @@ vim.opt.helplang = 'ja', 'en'
 vim.opt.swapfile = false --スワップファイルを生成しない
 vim.opt.wrap = true --端までコードが届いた際に折り返す
 vim.opt.termguicolors = true
+vim.opt.winblend = 0
+vim.opt.pumblend = 0
 
 -- 画面分割
 vim.keymap.set('n', 'sv', ':split<Return><C-w>w')
