@@ -4,12 +4,13 @@ return {
 	config = function()
 		require("toggleterm").setup({
 			size = 20,
-			open_mapping = [[<leader>t]],
+			open_mapping = [[tt]],
 			hide_numbers = true,
 			autochdir = false,
 			shade_terminals = false,
 			start_in_insert = true,
 			insert_mappings = false,
+			terminal_mapping = false,
 			direction = "float",
 			close_on_exit = true,
 			shell = vim.o.shell,
@@ -29,6 +30,6 @@ return {
 		function _lazygit_toggle()
 			lazygit:toggle()
 		end
-		vim.api.nvim_set_keymap("n","<leader>g","<cmd>lua _lazygit_toggle()<CR>",{noremap=true,silent=true})
+		vim.api.nvim_set_keymap("n","gg","<cmd>lua _lazygit_toggle()<CR>",{noremap=true,silent=true})
 	end,
 }
