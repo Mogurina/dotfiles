@@ -4,10 +4,12 @@ return {
 	config = function()
 		require("toggleterm").setup({
 			size = 20,
+			open_mapping = [[<leader>t]],
 			hide_numbers = true,
 			autochdir = false,
 			shade_terminals = false,
 			start_in_insert = true,
+			insert_mappings = false,
 			direction = "float",
 			close_on_exit = true,
 			shell = vim.o.shell,
@@ -22,6 +24,8 @@ return {
 		
 		local Terminal = require("toggleterm.terminal").Terminal
 		local lazygit = Terminal:new({cmd="lazygit",hidden=true})
+
+		
 
 		function _lazygit_toggle()
 			lazygit:toggle()
