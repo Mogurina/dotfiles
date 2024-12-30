@@ -12,7 +12,9 @@ return {
 			local packages = {
 				"gopls",
 				"typescript-language-server",
-				"jedi-language-server"
+				"jedi-language-server",
+				"css-lsp",
+				"html-lsp",
 			}
 
 			registry.refresh(function ()
