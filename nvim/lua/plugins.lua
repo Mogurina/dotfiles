@@ -29,7 +29,8 @@ local neovim_plugins = {
 	require("plugins.noice"),
 	require("plugins.toggleterm"),
 	require("plugins.autocmp"),--補完機能
-	require("plugins.colortheme")
+	require("plugins.colortheme"),
+	require("plugins.render-markdown"),
 }
 
 require('lazy').setup(neovim_plugins)

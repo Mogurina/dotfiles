@@ -72,6 +72,7 @@ return {
 					{ name = "nvim_lsp" },
 					{ name = "buffer" },
 					{ name = "path" },
+					{ name = "render-markdown" },
 				},
 				mapping = cmp.mapping.preset.insert({
 					["<S-TAB>"] = cmp.mapping.select_prev_item(),
