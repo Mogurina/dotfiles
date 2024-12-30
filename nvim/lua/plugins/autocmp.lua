@@ -7,6 +7,23 @@ return {
 		},
 		config = function()
 			require("mason").setup()
+			
+			local registry = require("mason-registry")
+			local packages = {
+				"gopls",
+				"typescript-language-server",
+				"jedi-language-server"
+			}
+
+			registry.refresh(function ()
+				for _, pkg_name in ipairs(packages) do
+					local pkg = registry.get_package(pkg_name)
+					if not pkg:is_installed() then
+						pkg:install()
+					end
+				end
+			end)
+
 			require("mason-lspconfig").setup()
 			require("mason-lspconfig").setup_handlers({
 				function(server)
@@ -54,7 +71,7 @@ return {
 				},
 				mapping = cmp.mapping.preset.insert({
 					["<S-TAB>"] = cmp.mapping.select_prev_item(),
-					["<TAB>"] = cmp.mapping.select_next_item(),
+					["<TAB>"] = cmp.mapping.select_next_item({behavior = cmp.SelectBehavior.Insert}),
 					['<C-l>'] = cmp.mapping.complete(),
 					['<C-e>'] = cmp.mapping.abort(),
 					["<CR>"] = cmp.mapping.confirm { select = true },
@@ -71,4 +88,5 @@ return {
 		end,
 	},
 }
+
 
