@@ -6,22 +6,23 @@ return {
 		opts = {},
 		config = function()
 			require("solarized-osaka").setup({
-				transparent = false,
-				terminal_colors = true,
+				transparent = true,
+				--terminal_colors = true,
 				style = {
 					comments = {italic = true},
 					keywords = {italic = true},
 					functions = {},
 					variables = {},
-					sidebars = "dark",
-					floats = "dark",
+					sidebars = "transparent",
+					floats = "transparent",
 				},
-				sidebars = {"qf"},
+				--sidebars = {"qf"},
 				day_brightness = 0.3,
 				hide_inactive_statusline = false,
 				dim_inactive = false,
 				lualine_bold = true,
 			})
+			vim.cmd("highlight Normal guibg=None,ctermbg=None")
 		end,
 	},
 	{

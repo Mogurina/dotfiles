@@ -28,7 +28,8 @@ return {
 					n = { ["q"] = actions.close },
 				},
 				--layout_strategy = 'vertical'
-				layout_strategy = 'horizontal'
+				layout_strategy = 'horizontal',
+				winblend = 0,
 			}
 		}
 	end
