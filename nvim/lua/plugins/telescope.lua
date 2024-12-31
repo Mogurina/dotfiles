@@ -28,6 +28,7 @@ return {
 					n = { ["q"] = actions.close },
 				},
 				--layout_strategy = 'vertical'
+				path_display = {"truncate"},--display short file path 
 				layout_strategy = 'horizontal',
 				winblend = 0,
 			}
