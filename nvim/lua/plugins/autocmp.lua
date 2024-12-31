@@ -59,8 +59,8 @@ return {
 
 			cmp.setup({
 				window = {
-					completion = cmp.config.window.bordered(),
-					documentation = cmp.config.window.bordered(),
+					completion = cmp.config.window.bordered({winhighlight="Normal:PopMenu,FloatBorder:None,CursorLine:Visual,Search:None"}),
+					documentation = cmp.config.window.bordered({winhighlight="Normal:PopMenu,FloatBorder:None,CursorLine:Visual,Search:None"}),
 				},
 				completion = {
 					completion = "menu,menuone,noinsert",

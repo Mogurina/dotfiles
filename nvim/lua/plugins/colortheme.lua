@@ -21,6 +21,8 @@ return {
 				hide_inactive_statusline = false,
 				dim_inactive = false,
 				lualine_bold = true,
+			
+
 				on_highlights = function(hl, c)
 					local prompt = "#2d3149"
 					hl.TelescopeNormal = {
@@ -50,9 +52,8 @@ return {
 						bg = c.bg_dark,
 						fg = c.bg_dark,
 					}
-				end
+				end,
 			})
-			vim.cmd("highlight Normal guibg=None,ctermbg=None")
 		end,
 	},
 	{
