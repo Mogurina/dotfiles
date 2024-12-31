@@ -4,7 +4,7 @@ return {
 	config = function()
 		require("toggleterm").setup({
 			size = 20,
-			open_mapping = [[tt]],
+			open_mapping = [[T]],
 			hide_numbers = true,
 			autochdir = false,
 			shade_terminals = false,
@@ -30,6 +30,6 @@ return {
 		function _lazygit_toggle()
 			lazygit:toggle()
 		end
-		vim.api.nvim_set_keymap("n","lg","<cmd>lua _lazygit_toggle()<CR>",{noremap=true,silent=true})
+		vim.api.nvim_set_keymap("n","G","<cmd>lua _lazygit_toggle()<CR>",{noremap=true,silent=true})
 	end,
 }
