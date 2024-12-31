@@ -52,6 +52,9 @@ return {
 						bg = c.bg_dark,
 						fg = c.bg_dark,
 					}
+					hl.PreProc={
+						fg = c.yellow500,
+					}
 				end,
 			})
 		end,
