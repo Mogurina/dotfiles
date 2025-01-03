@@ -8,6 +8,7 @@ vim.g['user_emmet_settings'] = {
 }
 --vim.g['user_emmet_leader_key'] = '<tab>'
 vim.g['user_emmet_expandabbr_key'] = '<tab>'
+vim.g['user_emmet_mode'] = 'n'
 
 local config = function()
 	vim.api.nvim_create_autocmd('FileType', {
