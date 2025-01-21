@@ -30,7 +30,6 @@ local neovim_plugins = {
 	require("plugins.toggleterm"),
 	require("plugins.autocmp"),--補完機能
 	require("plugins.colortheme"),
-	require("plugins.render-markdown"),
 	require("plugins.hlchunk"),
 }
 
