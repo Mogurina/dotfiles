@@ -72,7 +72,9 @@ return {
 				cmp.setup({
 					window = {
 						completion = cmp.config.window.bordered({winhighlight="Normal:PopMenu,FloatBorder:None,CursorLine:Visual,Search:None"}),
-						documentation = cmp.config.window.bordered({winhighlight="Normal:PopMenu,FloatBorder:None,CursorLine:Visual,Search:None"}),
+						documentation = cmp.config.window.bordered({
+							border = "rounded",
+							winhighlight="Normal:PopMenu,FloatBorder:None,CursorLine:Visual,Search:None"}),
 					},
 					completion = {
 						completion = "menu,menuone,noinsert",
@@ -84,9 +86,9 @@ return {
 					},
 					sources = {
 						{ name = "nvim_lsp" },
+						{ name = "nvim_lsp_signature_help"},
 						{ name = "buffer" },
 						{ name = "path" },
-						{ name = "render-markdown" },
 					},
 					mapping = cmp.mapping.preset.insert({
 						["<S-TAB>"] = cmp.mapping.select_prev_item(),
@@ -105,7 +107,20 @@ return {
 						--	},
 						--})
 					end,
+		},
+		{
+			"ray-x/lsp_signature.nvim",
+			event = "LspAttach",
+			opts = {
+				bind = true,
+				floating_window = false,
+				handler_opts = {
+					border = "rounded"
 				},
-			}
+				transparency = 10,
+			},
+			config = function(_, opts) require'lsp_signature'.on_attach(opts) end
+		}
+}
 
 

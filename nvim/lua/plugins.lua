@@ -22,7 +22,6 @@ local neovim_plugins = {
 	require("plugins.telescope-fzf"),--telescope
 	require("plugins.plenary"),--telescope
 	require("plugins.treesitter"),--シンタックスハイライト関係
-	require("plugins.nvim-tree"),
 	require("plugins.emmet"),
 	require("plugins.highlight-colors"),
 	require("plugins.nvim-notify"),
@@ -31,6 +30,7 @@ local neovim_plugins = {
 	require("plugins.autocmp"),--補完機能
 	require("plugins.colortheme"),
 	require("plugins.hlchunk"),
+	require("plugins.flash"),
 }
 
 require('lazy').setup(neovim_plugins)

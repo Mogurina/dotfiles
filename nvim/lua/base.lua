@@ -21,15 +21,6 @@ vim.opt.termguicolors = true
 vim.opt.winblend = 0
 vim.opt.pumblend = 0
 
--- 画面分割
-vim.keymap.set('n', 'sv', ':split<Return><C-w>w')
-vim.keymap.set('n', 'ss', ':vsplit<Return><C-w>w')
--- アクティブウィンドウの移動
-vim.keymap.set('n', 'sh', '<C-w>h')
-vim.keymap.set('n', 'sk', '<C-w>k')
-vim.keymap.set('n', 'sj', '<C-w>j')
-vim.keymap.set('n', 'sl', '<C-w>l')
-
 
 -- 外部からファイルを変更されたら反映する
 vim.api.nvim_create_autocmd({ "WinEnter", "FocusGained", "BufEnter" }, {
