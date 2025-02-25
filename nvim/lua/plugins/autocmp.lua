@@ -58,6 +58,12 @@ return {
 			end,
 		},
 		{
+			"zbirenbaum/copilot-cmp",
+			config = function ()
+				require("copilot_cmp").setup()
+			end
+		},
+		{
 			"hrsh7th/nvim-cmp",
 			event = "InsertEnter",
 			dependencies = {
@@ -86,6 +92,7 @@ return {
 					},
 					sources = {
 						{ name = "nvim_lsp" },
+						{ name = "copilot" },
 						{ name = "nvim_lsp_signature_help"},
 						{ name = "buffer" },
 						{ name = "path" },

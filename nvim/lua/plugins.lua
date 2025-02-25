@@ -31,6 +31,7 @@ local neovim_plugins = {
 	require("plugins.colortheme"),
 	require("plugins.hlchunk"),
 	require("plugins.flash"),
+	require("plugins.copilot"),
 }
 
 require('lazy').setup(neovim_plugins)
