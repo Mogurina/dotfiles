@@ -4,20 +4,26 @@ return{
 			cmd = "Copilot",
 			config = function()
 				require("copilot").setup({
-					suggestion = {enabled = true},
-					panel = {enabled = true},
+					suggestion = {enabled = false},
+					panel = {enabled = false},
 					copilot_node_command = 'node'
 				})
 			end,
 		},
 		{
 			"CopilotC-Nvim/CopilotChat.nvim",
-			branch = "canary",
+			branch = "main",
 			dependencies = {
 				{ "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
 				{ "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
 			},
 			build = "make tiktoken", -- Only on MacOS or Linux
+			mappings = {
+				submit_prompt = {
+					normal = "<Leader>f",
+					insert = "<C-s>",
+				}
+			},
 			opts = {
 				debug = true, -- Enable debugging
 				-- See Configuration section for rest

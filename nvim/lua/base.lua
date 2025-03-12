@@ -4,6 +4,8 @@ vim.scriptencoding = 'utf-8'
 
 vim.g.mapleader = " "
 vim.opt.number = true
+vim.opt.foldmethod = "indent" --インデント基準で折りたたむ
+vim.opt.foldlevel = 99 --折りたたみを開いた状態で開く
 --vim.opt.relativenumber = true
 vim.opt.title = true
 vim.opt.autoindent = true
