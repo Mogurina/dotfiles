@@ -1,10 +1,11 @@
--- encoding
+-- encodin0
 vim.o.encoding = 'utf-8'
 vim.scriptencoding = 'utf-8'
 
 vim.g.mapleader = " "
 vim.opt.number = true
 vim.opt.foldmethod = "indent" --インデント基準で折りたたむ
+vim.opt.foldcolumn = "1" --折りたたみの状態を表示
 vim.opt.foldlevel = 99 --折りたたみを開いた状態で開く
 --vim.opt.relativenumber = true
 vim.opt.title = true
