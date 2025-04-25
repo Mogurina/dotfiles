@@ -74,6 +74,10 @@ return {
 					disable_float_background = false, -- disable background for floats
 					disable_italics = false, -- disable italics
 				}
+			
+			require("notify").setup({
+				background_colour = "#000000",
+			})
 			end,
-	},
+	}
 }
