@@ -17,7 +17,7 @@ keymap.set('n', '<Leader>sj', '<C-w>j')
 keymap.set('n', '<Leader>sl', '<C-w>l')
 
 --　インデントで折り畳み
-keymap.set("n", "<Tab>", "zc")
-keymap.set("n", "<S-Tab>", "zo")
-keymap.set("n", "<Leader><Tab>", "zM")
-keymap.set("n", "<Leader><S-Tab>", "zR")
+keymap.set("n", "<leader><Tab>", "zc")
+keymap.set("n", "<leader><S-Tab>", "zo")
+--keymap.set("n", "<Leader><Tab>", "zM")
+--keymap.set("n", "<Leader><S-Tab>", "zR")
