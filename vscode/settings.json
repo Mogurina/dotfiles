@@ -76,5 +76,8 @@
         "sidebar": "hide",
         "panel": "hide",
         "secondarySidebar": "hide"
-      },
+    },
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    "window.customTitleBarVisibility": "never",
 }
