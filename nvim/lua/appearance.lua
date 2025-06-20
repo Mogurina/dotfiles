@@ -1,3 +1,5 @@
 --color
 -- vim.cmd[[colorscheme solarized-osaka]]
-vim.cmd[[colorscheme poimandres]]
+if not vim.g.vscode then
+	vim.cmd[[colorscheme poimandres]]
+end

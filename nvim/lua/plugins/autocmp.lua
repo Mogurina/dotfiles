@@ -36,6 +36,11 @@ return {
 							--   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
 							--   vim.cmd 'autocmd BufWritePre * lua vim.lsp.buf.formatting_sync(nil, 1000)'
 							-- end,
+							init_options = {
+								preferences = {
+										disableSuggestions = true -- Disable inline suggestions
+								}
+							},
 							capabilities = require('cmp_nvim_lsp').default_capabilities(
 							vim.lsp.protocol.make_client_capabilities()
 							)
@@ -54,7 +59,10 @@ return {
 							},
 						},
 					},
+
 				})
+
+
 			end,
 		},
 		{

@@ -15,6 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 
 
 local neovim_plugins = {
+	require("plugins.autocmp"),--補完機能
 	require("plugins.lualine"),
 	require("plugins.nvim-autopairs"), --文字の挿入を伴うプラグインは'InsertEnter'を指定する。
 	require("plugins.fidget"), --LSPと連動するプラグインは'LspAttach'を指定する。
@@ -27,7 +28,6 @@ local neovim_plugins = {
 	require("plugins.nvim-notify"),
 	require("plugins.noice"),
 	require("plugins.toggleterm"),
-	require("plugins.autocmp"),--補完機能
 	require("plugins.colortheme"),
 	require("plugins.hlchunk"),
 	require("plugins.flash"),
@@ -35,4 +35,11 @@ local neovim_plugins = {
 	require("plugins.snacks"),
 }
 
-require('lazy').setup(neovim_plugins)
+require('lazy').setup(neovim_plugins,{
+	defaults = {
+		cond = function()
+      -- VSCode Neovimからの起動でない場合のみ true を返す
+      return not vim.g.vscode
+    end,
+	},
+})
