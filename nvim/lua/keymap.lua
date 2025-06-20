@@ -53,6 +53,7 @@ if not vim.g.vscode then
 	keymap.set("n","F","<C-f>")
 	keymap.set("n","B","<C-b>")
 
+
 	keymap.set("n","<Leader>c",":CopilotChatToggle<Return>")
 
 	-- 画面分割

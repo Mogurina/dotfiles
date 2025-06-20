@@ -33,6 +33,7 @@ local neovim_plugins = {
 	require("plugins.flash"),
 	require("plugins.copilot"),
 	require("plugins.snacks"),
+	require("plugins.oil"),
 }
 
 require('lazy').setup(neovim_plugins,{
