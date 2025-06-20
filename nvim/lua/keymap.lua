@@ -38,9 +38,48 @@ if vim.g.vscode then
     vscode.action("editor.unfold")
   end)
 	-- Space g でLazygit起動する場合
-  vim.keymap.set("n", "<space>g", function()
+  vim.keymap.set("n", "GG", function()
     vscode.action("lazygit-vscode.toggle")
   end)
+
+	--oil for vscode settings
+	-- space o で起動する場合
+	vim.keymap.set("n", "<space>o", function()
+		vscode.action("oil-code.open")
+	end)
+	vim.api.nvim_create_autocmd("FileType", {
+		pattern = "oil",
+		callback = function(event)
+			-----------------------------------------------
+			-- Oil.Codeのタブが開かれたときだけ設定するキーマップ
+			-----------------------------------------------
+			local opts = { buffer = event.buf, noremap = true, silent = true }
+			vim.keymap.set("n", "<CR>", function()
+				vscode.action("oil-code.select")
+			end, opts)
+			vim.keymap.set("n", "<C-CR>", function()
+				vscode.action("oil-code.selectVertical")
+			end, opts)
+			-- 水平方向に展開するコマンドはないので複数コマンドを同期で連続させる
+			vim.keymap.set("n", "<C-s>", function()
+				vscode.call("workbench.action.splitEditorDown")
+				vscode.call("oil-code.selectTab")
+				vscode.call("workbench.action.previousEditorInGroup")
+				vscode.call("workbench.action.closeActiveEditor")
+			end, opts)
+
+			vim.keymap.set("n", "-", function()
+				vscode.action("oil-code.openParent")
+			end, opts)
+			vim.keymap.set("n", "_", function()
+				vscode.action("oil-code.openCwd")
+			end, opts)
+			vim.keymap.set("n", "<C-l>", function()
+				vscode.action("oil-code.refresh")
+			end, opts)
+		end,
+	})
+
 end
 
 
