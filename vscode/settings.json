@@ -67,5 +67,14 @@
             "command": "vscode-neovim.escape"
         }
     },
-    //teeeeeeeeeeeeeeeeeeeeest
+    // 開くエディタが異なるので違う設定
+      "lazygit-vscode.configPath": "~/dotfiles/lazygit/vscode-config.yaml",
+      // 分割エディタで開いた時にも対応
+      "lazygit-vscode.autoMaximizeWindow": true,
+      // Lazygitを起動したら全画面表示. hideRestoreはもともと非表示でも表示されてしまうので指定しない
+      "lazygit-vscode.panels": {
+        "sidebar": "hide",
+        "panel": "hide",
+        "secondarySidebar": "hide"
+      },
 }

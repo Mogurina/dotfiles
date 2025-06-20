@@ -37,6 +37,10 @@ if vim.g.vscode then
   vim.keymap.set("n", "zo", function()
     vscode.action("editor.unfold")
   end)
+	-- Space g でLazygit起動する場合
+  vim.keymap.set("n", "<space>g", function()
+    vscode.action("lazygit-vscode.toggle")
+  end)
 end
 
 

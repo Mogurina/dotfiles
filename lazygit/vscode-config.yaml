@@ -1,0 +1,8 @@
+# lazygit/vscode-config.yml
+
+# この2つの設定が必要
+os:
+  editPreset: "vscode"
+promptToReturnFromSubprocess: false
+
+# あとは通常のLazygitと同じ設定
