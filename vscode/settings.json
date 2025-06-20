@@ -1,0 +1,71 @@
+{
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.explorerKind": "external",
+    "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+    "r.rterm.mac": "/usr/local/bin/R",
+    "r.sessionWatcher": true,
+    "r.plot.useHttpgd": true,
+    "files.associations": {
+        "*.Rmd": "rmd"
+    },
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "window.zoomLevel": -1,
+    "terminal.integrated.inheritEnv": false,
+    "json.schemas": [
+
+    ],
+    // settings.json に追加
+    // 複数インスタンスをマージして1ウィンドウで表示
+    "window.nativeTabs": true,
+    // 左サイドのアクティビティバーを非展開時は非表示
+    "workbench.activityBar.location": "top",
+    
+    // フォント設定 (おまけ)
+    "editor.fontFamily": "CaskaydiaCove Nerd Font",
+    "editor.fontSize": 16,
+  
+    // インデントガイドを非表示にする
+    "editor.guides.indentation": false,
+    // ミニマップは非表示
+    "editor.minimap.enabled": false,
+    // カッコの色をペアごとに変えない (すべて同じ色にする)
+    "editor.bracketPairColorization.enabled": false,
+    // カーソルは点滅させない
+    "editor.cursorBlinking": "solid",
+    // カーソル行はgutterだけハイライト
+    "editor.renderLineHighlight": "gutter",
+    "workbench.colorTheme": "Ayu Mirage Zed",
+    // settings.json
+
+    // テーマ
+    "workbench.colorTheme": "Ayu Mirage Zed",
+    "workbench.colorCustomizations": {
+        // ライン番号とgutterの色変更
+        "editorLineNumber.foreground": "#888888",
+        "editorLineNumber.activeForeground": "#EFEF33",
+        // 選択範囲の色変更
+        "editor.selectionBackground": "#565612",
+        // オートコンプリートの色変更
+        "editorSuggestWidget.selectedForeground": "#CDCDCD",
+        "editorSuggestWidget.selectedBackground": "#363C58"
+    },
+    // アイコン
+    "workbench.iconTheme": "catppuccin-mocha",
+
+    //vscode neovim setting
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "vscode-neovim.compositeKeys": {
+        "jk": {
+            "command": "vscode-neovim.escape"
+        }
+    },
+    //teeeeeeeeeeeeeeeeeeeeest
+}

@@ -1,0 +1,28 @@
+// 既定値を上書きするには、このファイル内にキー バインドを挿入します
+    // keybindings.json
+[
+
+  // プライマリーサイドバーの表示切り替え
+  {
+    "key": "cmd+i",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  // コマンドパレット
+  {
+    "key": "cmd+escape",
+    "command": "workbench.action.showCommands"
+  },
+  // 次/前のタブへ移動
+  //     Neovimでも設定が必要 (Neovimエディタのタブ切り替え)
+  {
+    "key": "space l",
+    "command": "workbench.action.nextEditorInGroup",
+    "when": "!inputFocus"
+  },
+  {
+    "key": "space h",
+    "command": "workbench.action.previousEditorInGroup",
+    "when": "!inputFocus"
+  },
+
+]
