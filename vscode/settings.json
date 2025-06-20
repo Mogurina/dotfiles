@@ -27,7 +27,7 @@
     "workbench.activityBar.location": "top",
     
     // フォント設定 (おまけ)
-    "editor.fontFamily": "CaskaydiaCove Nerd Font",
+    "editor.fontFamily": "Hack Nerd Font",
     "editor.fontSize": 16,
   
     // インデントガイドを非表示にする
