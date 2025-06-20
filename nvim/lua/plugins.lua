@@ -31,7 +31,7 @@ local neovim_plugins = {
 	require("plugins.colortheme"),
 	require("plugins.hlchunk"),
 	require("plugins.flash"),
-	--require("plugins.copilot"),
+	require("plugins.copilot"),
 	require("plugins.snacks"),
 }
 
