@@ -107,6 +107,7 @@ return {
 			event = "LspAttach",
 			opts = {
 				bind = true,
+				hint_enable = false,
 				floating_window = false,
 				handler_opts = {
 					border = "rounded"
