@@ -104,15 +104,16 @@ return {
 		},
 		{
 			"ray-x/lsp_signature.nvim",
-			event = "LspAttach",
+			event = "LSPAttach",
 			opts = {
 				bind = true,
 				hint_enable = false,
-				floating_window = false,
+				transparency = 100,
+				shadow_blend = 0,
+				floating_window = true,
 				handler_opts = {
 					border = "rounded"
 				},
-				transparency = 10,
 			},
 			config = function(_, opts) require'lsp_signature'.on_attach(opts) end
 		}
