@@ -24,6 +24,7 @@ vim.opt.termguicolors = true
 vim.opt.winblend = 0
 vim.opt.pumblend = 0
 
+vim.deprecate = function() end -- disable deprecate warnings
 
 -- 外部からファイルを変更されたら反映する
 vim.api.nvim_create_autocmd({ "WinEnter", "FocusGained", "BufEnter" }, {

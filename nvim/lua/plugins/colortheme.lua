@@ -79,5 +79,22 @@ return {
 				background_colour = "#000000",
 			})
 			end,
-	}
+	},
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {
+			transparent = true,
+			style = {
+				comments = {italic = true},
+				keywords = {italic = true},
+				functions = {},
+				variables = {},
+				sidebars = "transparent",
+				floats = "transparent",
+			},
+		},
+	},
 }
+
