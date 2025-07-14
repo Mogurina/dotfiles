@@ -30,7 +30,7 @@ return {
 						fg = c.fg_dark,
 					}
 					hl.TelescopeBorder = {
-						bg = c.bg_dark,
+						bg = none,
 						fg = c.bg_dark,
 					}
 					hl.TelescopePromptNormal = {
@@ -92,14 +92,30 @@ return {
             fg = c.fg_dark,
         }
         hl.TelescopeBorder = {
-            --fg = c.bg_dark,
+            fg = c.green,
         }
 				hl.TelescopePromptNormal = {
 					fg = c.fg_dark,
 				}
 				hl.TelescopePromptBorder = {
 					--fg = c.fg_dark,
-					fg = none,
+					fg = c.orange,
+				}
+				hl.TelescopePreviewTitle = {
+					bg = none,
+					fg = c.green,
+				}
+				hl.TelescopePreviewBorder = {
+					bg = none,
+					fg = c.green,
+				}
+				hl.TelescopeResultsTitle = {
+					bg = none,
+					fg = c.green,
+				}
+				hl.TelescoopResultsBorder = {
+					bg = none,
+					fg = c.green,
 				}
 			end,
 			style = {
