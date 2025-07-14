@@ -17,7 +17,7 @@ return {
 					floats = "transparent",
 				},
 				--sidebars = {"qf"},
-				day_brightness = 0.7,
+				day_brightness = 0.4,
 				hide_inactive_statusline = false,
 				dim_inactive = false,
 				lualine_bold = true,
