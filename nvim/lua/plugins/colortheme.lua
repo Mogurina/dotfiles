@@ -92,8 +92,15 @@ return {
             fg = c.fg_dark,
         }
         hl.TelescopeBorder = {
-            fg = c.bg_dark,
+            --fg = c.bg_dark,
         }
+				hl.TelescopePromptNormal = {
+					fg = c.fg_dark,
+				}
+				hl.TelescopePromptBorder = {
+					--fg = c.fg_dark,
+					fg = none,
+				}
 			end,
 			style = {
 				comments = {italic = true},
