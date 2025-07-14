@@ -94,6 +94,10 @@ return {
         hl.TelescopeBorder = {
             fg = c.green,
         }
+				hl.TelescopePromptTitle = {
+					bg = none,
+					fg = c.orange,
+				}
 				hl.TelescopePromptNormal = {
 					fg = c.fg_dark,
 				}
