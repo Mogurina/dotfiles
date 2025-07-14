@@ -115,7 +115,7 @@ return {
 				}
 				hl.TelescopeResultsTitle = {
 					bg = none,
-					fg = c.green,
+					fg = c.bule,
 				}
 				hl.TelescoopResultsBorder = {
 					bg = none,
