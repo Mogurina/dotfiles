@@ -86,6 +86,15 @@ return {
 		priority = 1000,
 		opts = {
 			transparent = true,
+			on_highlights = function(hl, c)
+				-- set telescope-bg transparent
+        hl.TelescopeNormal = {
+            fg = c.fg_dark,
+        }
+        hl.TelescopeBorder = {
+            fg = c.bg_dark,
+        }
+			end,
 			style = {
 				comments = {italic = true},
 				keywords = {italic = true},
@@ -97,4 +106,3 @@ return {
 		},
 	},
 }
-
