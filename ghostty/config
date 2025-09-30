@@ -1,8 +1,13 @@
 font-size = 12
 
-background-opacity = 1
-#background-blur-radius = 20
+background-opacity = 0.7
+background-blur-radius = 20
 
-theme = tokyonight_moon
+keybind = global:ctrl+space=toggle_quick_terminal
+quick-terminal-size = 60%,75%
+quick-terminal-position = center
+
+#theme = tokyonight_moon
 #theme = Tinacious Design (Dark)
-#theme = Ayu Mirage
+theme = Ayu Mirage
+#theme = citruszest
