@@ -34,6 +34,7 @@ local neovim_plugins = {
 	require("plugins.copilot"),
 	require("plugins.snacks"),
 	require("plugins.oil"),
+	require("plugins.render-markdown"),
 }
 
 require('lazy').setup(neovim_plugins,{

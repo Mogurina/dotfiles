@@ -87,6 +87,9 @@ return {
 		opts = {
 			transparent = true,
 			on_highlights = function(hl, c)
+				hl.LineNr = {-- line numbers color
+					fg = c.fg_dark,
+				}
 				-- set telescope-bg transparent
         hl.TelescopeNormal = {
             fg = c.fg_dark,
