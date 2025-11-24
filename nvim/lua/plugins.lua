@@ -35,6 +35,8 @@ local neovim_plugins = {
 	require("plugins.snacks"),
 	require("plugins.oil"),
 	require("plugins.render-markdown"),
+	require("plugins.tokyodark"),
+	require("plugins.everforest"),
 }
 
 require('lazy').setup(neovim_plugins,{
