@@ -1,5 +1,6 @@
 return {
 	"rcarriga/nvim-notify",
+	event = "VeryLazy",
 	opts = {
 		timeout = 5000,
 	},

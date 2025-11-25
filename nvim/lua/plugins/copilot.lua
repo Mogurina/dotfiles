@@ -1,6 +1,7 @@
 return{
 		{
 			"zbirenbaum/copilot.lua",
+			event = "VeryLazy",
 			cmd = "Copilot",
 			config = function()
 				require("copilot").setup({
@@ -12,6 +13,7 @@ return{
 		},
 		{
 			"CopilotC-Nvim/CopilotChat.nvim",
+			event = "VeryLazy",
 			branch = "main",
 			dependencies = {
 				{ "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
