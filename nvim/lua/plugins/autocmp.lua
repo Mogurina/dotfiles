@@ -1,4 +1,10 @@
 return {
+	{ "williamboman/mason.nvim",
+		event = "VeryLazy",
+	},
+	{ "neovim/nvim-lspconfig",
+		event = "VeryLazy",
+	},
 	{
 		"williamboman/mason-lspconfig.nvim",
 		event = "VeryLazy",
@@ -47,6 +53,7 @@ return {
 		},
 		{
 			"zbirenbaum/copilot-cmp",
+			event = "VeryLazy",
 			config = function ()
 				require("copilot_cmp").setup()
 			end

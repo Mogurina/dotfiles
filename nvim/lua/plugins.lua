@@ -36,6 +36,7 @@ local neovim_plugins = {
 
 require('lazy').setup(neovim_plugins,{
 	defaults = {
+		--event="VeryLazy", -- デフォルトで全てのプラグインを'VeryLazy'イベントで読み込む
 		cond = function()
       -- VSCode Neovimからの起動でない場合のみ true を返す
       return not vim.g.vscode

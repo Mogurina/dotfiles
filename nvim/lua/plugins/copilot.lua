@@ -11,6 +11,9 @@ return{
 				})
 			end,
 		},
+		{ "nvim-lua/plenary.nvim",
+			event = "VeryLazy",
+		}, -- for curl, log wrapper
 		{
 			"CopilotC-Nvim/CopilotChat.nvim",
 			event = "VeryLazy",
