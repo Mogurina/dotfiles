@@ -19,8 +19,8 @@ local neovim_plugins = {
 	require("plugins.lualine"),
 	require("plugins.nvim-autopairs"), --文字の挿入を伴うプラグインは'InsertEnter'を指定する。
 	require("plugins.fidget"), --LSPと連動するプラグインは'LspAttach'を指定する。
-	require("plugins.telescope"),--telescope	
-	require("plugins.telescope-fzf"),--telescope
+	--require("plugins.telescope"),--telescope	
+	--require("plugins.telescope-fzf"),--telescope snacks pickerに置き換えた
 	require("plugins.plenary"),--telescope
 	require("plugins.treesitter"),--シンタックスハイライト関係
 	require("plugins.emmet"),
