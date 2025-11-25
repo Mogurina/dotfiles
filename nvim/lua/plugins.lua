@@ -21,21 +21,21 @@ local neovim_plugins = {
 	require("plugins.fidget"), --LSPと連動するプラグインは'LspAttach'を指定する。
 	--require("plugins.telescope"),--telescope	
 	--require("plugins.telescope-fzf"),--telescope snacks pickerに置き換えた
-	require("plugins.plenary"),--telescope
+	--require("plugins.plenary"),--telescope
 	require("plugins.treesitter"),--シンタックスハイライト関係
-	require("plugins.emmet"),
+	--require("plugins.emmet"),
 	require("plugins.highlight-colors"),
 	require("plugins.nvim-notify"),
 	require("plugins.noice"),
 	require("plugins.toggleterm"),
-	require("plugins.colortheme"),
+	--require("plugins.colortheme"),
 	require("plugins.hlchunk"),
 	require("plugins.flash"),
 	require("plugins.copilot"),
 	require("plugins.snacks"),
 	require("plugins.oil"),
 	require("plugins.render-markdown"),
-	require("plugins.tokyodark"),
+	--require("plugins.tokyodark"),
 	require("plugins.everforest"),
 }
 
