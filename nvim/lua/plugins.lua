@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 local neovim_plugins = {
 	require("plugins.snacks"),
-	--require("plugins.barbar"),
+	require("plugins.barbar"),
 	require("plugins.autocmp"),--補完機能
 	require("plugins.lualine"),
 	require("plugins.nvim-autopairs"), --文字の挿入を伴うプラグインは'InsertEnter'を指定する。
