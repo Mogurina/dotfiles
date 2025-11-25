@@ -37,17 +37,4 @@ return {
 		{"fg", function() Snacks.picker.grep() end, desc = "Smart Find Files" },
 		{"fe", function() Snacks.picker.explorer() end, desc = "Smart Find Files" },
 	},
-
-	-- ハイライトのカスタマイズ（赤や錆色を強調）
-  config = function(_, opts)
-    require("snacks").setup(opts)
-    -- 色味（赤、濃いピンク、シアン）を定義
-    vim.api.nvim_set_hl(0, "SnacksDashboardHeader", { fg = "#d20f39", bold = true }) 
-    vim.api.nvim_set_hl(0, "SnacksDashboardDesc", { fg = "#a9b1d6" })
-    vim.api.nvim_set_hl(0, "SnacksDashboardIcon", { fg = "#ff007c" })
-    vim.api.nvim_set_hl(0, "SnacksDashboardFooter", { fg = "#565f89", italic = true })
-    
-    -- Terminalセクションの文字色（Copland OSの緑や白をイメージ）
-    vim.api.nvim_set_hl(0, "SnacksDashboardTerminal", { fg = "#73daca" }) 
-  end,
 }
