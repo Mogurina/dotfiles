@@ -46,16 +46,16 @@ return {
 				{
 					section = "terminal",
 					cmd = "chafa " .. dashboardImagePath .. " --size 52 --symbols vhalf; sleep .1",
-					height = 50,
-					padding = 0,
+					height = 30,
+					padding = 2,
 				},
 				{
 					pane=2,
-					{ section = "header", padding = 2, color = "SnacksDashboardHeader" },
+					{ section = "header", padding = 5, color = "SnacksDashboardHeader" },
 					-- ここで "keys" を指定すると、上で定義した preset.keys が表示されます
 					-- デフォルトのメニューは表示されなくなります
-					{ icon = " ", title = "Keymaps", section = "keys", indent = 2, padding = 1 },
-					{ section = "startup", padding = 2 },
+					{ icon = " ", title = "Keymaps", section = "keys", indent = 2, padding = 5 },
+					{ section = "startup", padding = 5 },
 				},
       },
     },
