@@ -23,7 +23,9 @@ return {
 	--@type snacks.Config
 	opts = {
 
-		picker = {enable=ture},
+		picker = {
+			enable=ture,
+		},
 
 		dashboard = {
 
@@ -64,5 +66,16 @@ return {
 		{"fs", function() Snacks.picker.smart() end, desc = "Smart Find Files" },
 		{"fg", function() Snacks.picker.grep() end, desc = "Smart Find Files" },
 		{"fe", function() Snacks.picker.explorer() end, desc = "Smart Find Files" },
+		{"fb", function() Snacks.picker.buffers(
+			{
+			win = {
+				input = {
+					keys={
+						["dd"] = {"bufdelete",mode={"n","i"}},
+					},
+				},
+			},
+			}
+		) end, desc = "Smart Find Files" },
 	},
 }
