@@ -35,6 +35,7 @@ return {
 		{"ff", function() Snacks.picker.files() end, desc = "Smart Find Files" },
 		{"fs", function() Snacks.picker.smart() end, desc = "Smart Find Files" },
 		{"fg", function() Snacks.picker.grep() end, desc = "Smart Find Files" },
+		{"fe", function() Snacks.picker.explorer() end, desc = "Smart Find Files" },
 	},
 
 	-- ハイライトのカスタマイズ（赤や錆色を強調）
