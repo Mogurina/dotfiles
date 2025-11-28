@@ -35,7 +35,7 @@ return {
           { icon = " ", key = "r", desc = "Recent Files", action = function() preventFlicker(Snacks.picker.recent) end,},
           { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
           { icon = " ", key = "g", desc = "Live Grep", action = function() preventFlicker(Snacks.picker.grep) end,},
-          { icon = " ", key = "c", desc = "System Config",action = function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end},
+          { icon = " ", key = "c", desc = "System Config",action = function() preventFlicker(function() Snacks.picker.files({cwd = vim.fn.stdpath("config")}) end) end},
 					{ icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy"},
           { icon = " ", key = "q", desc = "Quit", action = ":qa" },
         },
