@@ -1,5 +1,5 @@
 
-local dashboardImagePath = vim.fn.stdpath("config") .. "/lua/assets/lain.png"
+local dashboardImagePath = vim.fn.stdpath("config") .. "/lua/assets/lain.six"
 
 -- dashboard で picker を開いて移動する際に発生するチラつきを防止する
 local preventFlicker = function(handler)
@@ -45,7 +45,7 @@ return {
       sections = {
 				{
 					section = "terminal",
-					cmd = "chafa " .. dashboardImagePath .. " --size 52 --symbols vhalf; sleep .1",
+					cmd = "cat " .. dashboardImagePath,
 					height = 30,
 					padding = 2,
 				},
