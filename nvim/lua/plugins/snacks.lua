@@ -62,6 +62,7 @@ return {
 	},
 
 	keys = {
+		{"<leader>d", function() Snacks.dashboard() end, desc = "Smart Find Files" },
 		{"ff", function() Snacks.picker.files() end, desc = "Smart Find Files" },
 		{"fs", function() Snacks.picker.smart() end, desc = "Smart Find Files" },
 		{"fg", function() Snacks.picker.grep() end, desc = "Smart Find Files" },
