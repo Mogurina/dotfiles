@@ -7,8 +7,8 @@ keymap.set("n","F","<C-f>")
 keymap.set("n","B","<C-b>")
 
 --bufferline
-keymap.set("n","<leader>h","<cmd>bnext<CR>")
-keymap.set("n","<leader>l","<cmd>bprev<CR>")
+keymap.set("n","<leader>l","<cmd>BufferNext<CR>")
+keymap.set("n","<leader>h","<cmd>BufferPrevious<CR>")
 
 keymap.set("n","<Leader>c",":CopilotChatToggle<Return>")
 
