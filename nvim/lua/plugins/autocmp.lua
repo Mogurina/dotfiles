@@ -97,7 +97,7 @@ return {
 						["<TAB>"] = cmp.mapping.select_next_item({behavior = cmp.SelectBehavior.Insert}),
 						['<C-l>'] = cmp.mapping.complete(),
 						['<C-e>'] = cmp.mapping.abort(),
-						["<CR>"] = cmp.mapping.confirm { select = true },
+						["<CR>"] = cmp.mapping.confirm { select = false },
 					}),
 					experimental = {
 						ghost_text = true,
