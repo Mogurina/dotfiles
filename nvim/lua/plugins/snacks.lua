@@ -51,7 +51,7 @@ return {
 				},
 				{
 					pane=2,
-					{ section = "header", padding = 5, color = "SnacksDashboardHeader" },
+					{ section = "header", padding = 5, color="" },
 					-- ここで "keys" を指定すると、上で定義した preset.keys が表示されます
 					-- デフォルトのメニューは表示されなくなります
 					{ icon = " ", title = "Keymaps", section = "keys", indent = 2, padding = 5 },
@@ -79,4 +79,6 @@ return {
 			}
 		) end, desc = "Smart Find Files" },
 	},
+vim.api.nvim_set_hl(0, "SnacksDashboardHeader", { link = "EverforestGreen" })
 }
+

@@ -24,7 +24,7 @@ local neovim_plugins = {
 	require("plugins.nvim-notify"),
 	require("plugins.noice"),
 	require("plugins.toggleterm"),
-	--require("plugins.colortheme"),
+	require("plugins.colortheme"),
 	require("plugins.hlchunk"),
 	require("plugins.flash"),
 	require("plugins.copilot"),

@@ -1,9 +1,7 @@
 --colo0
---vim.cmd[[colorscheme tokyonight-moon]]
+vim.cmd[[colorscheme tokyonight-moon]]
 --vim.cmd[[colorscheme tokyonight-night]]
---vim.cmd[[colorscheme tokyonight]]
---vim.cmd[[colorscheme tokyodark]]
-vim.cmd[[colorscheme everforest]]
+--vim.cmd[[colorscheme everforest]]
 --vim.cmd[[colorscheme catppuccin-mocha]]
 
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
