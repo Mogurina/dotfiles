@@ -7,7 +7,6 @@ local preventFlicker = function(handler)
     Snacks.bufdelete()
   end)
   vim.schedule(function()
-    -- ここの順番が逆だとno-neck-painがエラーになる
     vim.cmd([[:BarbarEnable]])
   end)
   vim.schedule(function()
