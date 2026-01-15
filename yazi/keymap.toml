@@ -10,3 +10,9 @@ desc = "Enter the child directory, or open the file"
 on   = "I"
 run  = "plugin toggle-pane max-preview"
 desc = "Maximize or restore the preview pane"
+
+[[mgr.prepend_keymap]]
+on =  "o"
+run = "create"
+desc = "Create a new file or directory"
+
