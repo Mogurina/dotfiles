@@ -5,6 +5,8 @@ keymap.set('i','jk','<ESC>')
 keymap.set('v','jk','<ESC>')
 keymap.set("n","F","<C-f>")
 keymap.set("n","B","<C-b>")
+keymap.set("n","<C-k>","<C-u>")
+keymap.set("n","<C-j>","<C-d>")
 
 --bufferline
 keymap.set("n","<leader>l","<cmd>BufferNext<CR>")
