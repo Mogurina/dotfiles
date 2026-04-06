@@ -1,6 +1,3 @@
-
-local dashboardImagePath = vim.fn.stdpath("config") .. "/lua/assets/lain.six"
-
 -- dashboard で picker を開いて移動する際に発生するチラつきを防止する
 local preventFlicker = function(handler)
   vim.schedule(function()
@@ -49,13 +46,7 @@ return {
 			-- 2. ここで表示する順番（レイアウト）を決めます
       sections = {
 				{
-					section = "terminal",
-					cmd = "cat " .. dashboardImagePath,
-					height = 30,
-					padding = 2,
-				},
-				{
-					pane=2,
+					pane=1,
 					{ section = "header", padding = 5, color="" },
 					-- ここで "keys" を指定すると、上で定義した preset.keys が表示されます
 					-- デフォルトのメニューは表示されなくなります
