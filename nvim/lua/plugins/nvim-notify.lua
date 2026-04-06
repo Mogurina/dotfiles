@@ -2,11 +2,7 @@ return {
 	"rcarriga/nvim-notify",
 	event = "VeryLazy",
 	opts = {
-		timeout = 5000,
+		stages = "fade",
+		timeout = 30,
 	},
-	config = function()
-		local notify = require("notify")
-		notify.setup()
-		vim.notify = notify
-	end,
 }

@@ -20,6 +20,10 @@ return {
 		config = function()
 			require("noice").setup({
 				lsp = {
+
+				progress = {
+					enabled = false,
+				},
 				-- override markdown rendering so that **cmp** and other plugins use **Treesitter**
 				hover = {
 					enabled = true,

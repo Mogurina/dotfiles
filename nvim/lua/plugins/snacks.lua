@@ -22,6 +22,12 @@ return {
 	--@type snacks.Config
 	opts = {
 
+		lsp = {
+			progress = {
+				enabled = false,
+			},
+		},
+
 		picker = {
 			enable=ture,
 		},
