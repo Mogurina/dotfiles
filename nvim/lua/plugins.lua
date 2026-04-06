@@ -32,7 +32,7 @@ local neovim_plugins = {
 	require("plugins.render-markdown"),
 	--require("plugins.catppuccin"),
 	--require("plugins.tokyodark"),
-	require("plugins.everforest"),
+	--require("plugins.everforest"),
 	require("plugins.nvim-ts-autotag"),
 }
 

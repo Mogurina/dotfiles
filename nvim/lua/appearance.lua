@@ -1,6 +1,6 @@
 --colo0
-vim.cmd[[colorscheme tokyonight-moon]]
---vim.cmd[[colorscheme tokyonight-night]]
+--vim.cmd[[colorscheme tokyonight-moon]]
+vim.cmd[[colorscheme tokyonight-night]]
 --vim.cmd[[colorscheme everforest]]
 --vim.cmd[[colorscheme catppuccin-mocha]]
 

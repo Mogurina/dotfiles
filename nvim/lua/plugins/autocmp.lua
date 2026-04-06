@@ -1,20 +1,8 @@
 return {
 	{ "williamboman/mason.nvim",
-		event = "VeryLazy",
-	},
-	{ "neovim/nvim-lspconfig",
-		event = "VeryLazy",
-	},
-	{
-		"williamboman/mason-lspconfig.nvim",
-		event = "VeryLazy",
-		dependencies = {
-			{ "williamboman/mason.nvim"},
-			{ "neovim/nvim-lspconfig" },
-		},
+		event = { "BufReadPre", "BufNewFile" },
 		config = function()
 			require("mason").setup()
-
 			local registry = require("mason-registry")
 			local packages = {
 				"gopls",
@@ -23,7 +11,6 @@ return {
 				"css-lsp",
 				"html-lsp",
 			}
-
 			registry.refresh(function ()
 				for _, pkg_name in ipairs(packages) do
 					local pkg = registry.get_package(pkg_name)
@@ -32,99 +19,55 @@ return {
 					end
 				end
 			end)
+		end,
+	},
+	-- 2. Blink.cmp (補完・シグネチャ・ゴーストテキストを全て統合)
+  {
+    "saghen/blink.cmp",
+    version = "*",
+		event = { "InsertEnter", "BufReadPre", "BufNewFile" },
+    dependencies = {
+      "zbirenbaum/copilot.lua", -- Copilot本体 (事前にsetupが必要な場合があります)
+      "giuxtaposition/blink-cmp-copilot", -- Blink用のCopilotブリッジ
+    },
+    opts = {
+      -- ユーザー定義のキーマップをBlink向けに翻訳
+      keymap = {
+        ['<S-Tab>'] = { 'select_prev', 'fallback' },
+        ['<Tab>']   = { 'select_next', 'snippet_forward', 'fallback' },
+        ['<C-l>']   = { 'show', 'show_documentation', 'hide_documentation' },
+        ['<C-e>']   = { 'hide' },
+        ['<CR>']    = { 'accept', 'fallback' },
+      },
+      
+      -- ゴーストテキスト（experimental.ghost_textの代わり）
+      completion = {
+        ghost_text = { enabled = true },
+        menu = { border = "rounded" },
+        documentation = { window = { border = "rounded" } },
+      },
 
-			require("mason-lspconfig").setup()
-				local capabilities = vim.lsp.protocol.make_client_capabilities()
-				capabilities.textDocument.completion.completionItem.snippetSupport = true
-				require('lspconfig').cssls.setup({
-					capabilities=capabilities,
-					settings = {
-						css = {
-							lint = {
-								unknownAtRules = 'ignore',
-							},
-						},
-					},
+      -- lsp_signature.nvim と cmp-nvim-lsp-signature-help の代わり
+      signature = {
+        enabled = true,
+        window = { border = "rounded" },
+      },
 
-				})
+      -- 使用するソース (LSP, Copilot, パス, バッファ, スニペットが標準装備)
+      sources = {
+        default = { 'lsp', 'copilot', 'path', 'snippets', 'buffer' },
+        providers = {
+          copilot = {
+            name = "copilot",
+            module = "blink-cmp-copilot",
+            score_offset = 100, -- Copilotの提案を上に表示したい場合の調整
+            async = true,
+          },
+        },
+      },
+    }
+	},
 
 
-			end,
-		},
-		{
-			"zbirenbaum/copilot-cmp",
-			event = "VeryLazy",
-			config = function ()
-				require("copilot_cmp").setup()
-			end
-		},
-		{
-			"hrsh7th/nvim-cmp",
-			event = "InsertEnter",
-			dependencies = {
-				"hrsh7th/cmp-buffer",
-				"hrsh7th/cmp-path",
-				"hrsh7th/cmp-nvim-lsp",
-				"hrsh7th/vim-vsnip",
-			},
-			config = function()
-				local cmp = require("cmp")
 
-				cmp.setup({
-					window = {
-						completion = cmp.config.window.bordered({winhighlight="Normal:PopMenu,FloatBorder:None,CursorLine:Visual,Search:None"}),
-						documentation = cmp.config.window.bordered({
-							border = "rounded",
-							winhighlight="Normal:PopMenu,FloatBorder:None,CursorLine:Visual,Search:None"}),
-					},
-					completion = {
-						completion = "menu,menuone,noinsert",
-					},
-					snippet = {
-						expand = function(args)
-							vim.fn["vsnip#anonymous"](args.body)
-						end,
-					},
-					sources = {
-						{ name = "nvim_lsp" },
-						{ name = "copilot" },
-						{ name = "nvim_lsp_signature_help"},
-						{ name = "buffer" },
-						{ name = "path" },
-					},
-					mapping = cmp.mapping.preset.insert({
-						["<S-TAB>"] = cmp.mapping.select_prev_item(),
-						["<TAB>"] = cmp.mapping.select_next_item({behavior = cmp.SelectBehavior.Insert}),
-						['<C-l>'] = cmp.mapping.complete(),
-						['<C-e>'] = cmp.mapping.abort(),
-						["<CR>"] = cmp.mapping.confirm { select = false },
-					}),
-					experimental = {
-						ghost_text = true,
-					},
-				})
-				--cmp.setup.cmdline(":", {
-					--	completion = {
-						--		completeopt = "menu,menuone,noinsert,noselect",
-						--	},
-						--})
-					end,
-		},
-		{
-			"ray-x/lsp_signature.nvim",
-			event = "LSPAttach",
-			opts = {
-				bind = true,
-				hint_enable = false,
-				transparency = 100,
-				shadow_blend = 0,
-				floating_window = true,
-				handler_opts = {
-					border = "rounded"
-				},
-			},
-			config = function(_, opts) require'lsp_signature'.on_attach(opts) end
-		}
 }
-
-
