@@ -6,6 +6,7 @@ return {
 			local registry = require("mason-registry")
 			local packages = {
 				"gopls",
+				"pyright",
 				"typescript-language-server",
 				"jedi-language-server",
 				"css-lsp",
