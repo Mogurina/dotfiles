@@ -32,6 +32,7 @@ return {
       "giuxtaposition/blink-cmp-copilot", -- Blink用のCopilotブリッジ
     },
     opts = {
+
       -- ユーザー定義のキーマップをBlink向けに翻訳
       keymap = {
         ['<S-Tab>'] = { 'select_prev', 'fallback' },
@@ -43,6 +44,10 @@ return {
       
       -- ゴーストテキスト（experimental.ghost_textの代わり）
       completion = {
+				list = {
+					-- 自動的に選択・挿入させない
+					selection = { preselect = false, auto_insert = false },
+				},
         ghost_text = { enabled = true },
         menu = { border = "rounded" },
         documentation = { window = { border = "rounded" } },
