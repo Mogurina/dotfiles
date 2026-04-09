@@ -35,6 +35,7 @@ local neovim_plugins = {
 	--require("plugins.everforest"),
 	require("plugins.nvim-ts-autotag"),
 	require("plugins.diffview"),
+	require("plugins.indent-blankline"),
 }
 
 require('lazy').setup(neovim_plugins,{
