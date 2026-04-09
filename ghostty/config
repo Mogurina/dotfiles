@@ -2,3 +2,6 @@
 #background-blur-radius = 20
 
 theme = Ayu Mirage
+
+
+keybind = ctrl+j=ignore
