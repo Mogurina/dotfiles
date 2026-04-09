@@ -34,6 +34,7 @@ local neovim_plugins = {
 	--require("plugins.tokyodark"),
 	--require("plugins.everforest"),
 	require("plugins.nvim-ts-autotag"),
+	require("plugins.diffview"),
 }
 
 require('lazy').setup(neovim_plugins,{
