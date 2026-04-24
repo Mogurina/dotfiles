@@ -31,3 +31,15 @@ vim.api.nvim_create_autocmd({ "WinEnter", "FocusGained", "BufEnter" }, {
   pattern = "*",
   command = "checktime",
 })
+
+
+
+-- カーソルを止めて0.5秒後に詳細（浮遊窓）を出す
+vim.api.nvim_create_autocmd("CursorHold", {
+  callback = function()
+    vim.diagnostic.open_float(nil, { focusable = false })
+  end,
+})
+
+-- 反応速度（デフォルト4000msなので短くする）
+vim.opt.updatetime = 500
