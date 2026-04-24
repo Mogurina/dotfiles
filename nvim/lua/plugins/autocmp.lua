@@ -49,7 +49,10 @@ return {
 					selection = { preselect = false, auto_insert = false },
 				},
         ghost_text = { enabled = true },
-        menu = { border = "rounded" },
+        menu = {
+					border = "rounded",
+					winhighlight = 'FloatBorder:BlinkCmpMenuBorder,CursorLine:BlinkCmpMenuSelection,Search:None',
+				},
         documentation = { window = { border = "rounded" } },
       },
 
