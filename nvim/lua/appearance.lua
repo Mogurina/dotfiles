@@ -1,8 +1,7 @@
 --colo0
---vim.cmd[[colorscheme tokyonight-moon]]
-vim.cmd[[colorscheme tokyonight-night]]
-
-
+vim.cmd[[colorscheme tokyonight-moon]]
+--vim.cmd[[colorscheme tokyonight-storm]]
+--vim.cmd[[colorscheme tokyonight-night]]
 
 
 --透過処理
