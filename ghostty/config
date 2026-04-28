@@ -6,6 +6,7 @@
 theme = IR Black
 
 #keybind = ctrl+j=ignore
+#
 
-font-family = "Terminess Nerd Font Mono"
+#font-family = "Terminess Nerd Font Mono"
 font-size = 18
