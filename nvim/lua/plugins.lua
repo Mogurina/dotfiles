@@ -34,6 +34,7 @@ local neovim_plugins = {
 	require("plugins.nvim-ts-autotag"),
 	require("plugins.diffview"),
 	require("plugins.indent-blankline"),
+	require("plugins.debug"),
 }
 
 require('lazy').setup(neovim_plugins,{
