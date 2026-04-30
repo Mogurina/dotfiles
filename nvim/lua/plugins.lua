@@ -18,6 +18,7 @@ local neovim_plugins = {
 	require("plugins.autocmp"),--補完機能
 	require("plugins.lualine"),
 	require("plugins.nvim-autopairs"), --文字の挿入を伴うプラグインは'InsertEnter'を指定する。
+	require("plugins.nvim-surround"),
 	require("plugins.fidget"), --LSPと連動するプラグインは'LspAttach'を指定する。
 	require("plugins.treesitter"),--シンタックスハイライト関係
 	require("plugins.highlight-colors"),
