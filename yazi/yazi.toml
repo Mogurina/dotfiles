@@ -5,8 +5,8 @@ show_hidden = true
 [preview]
 max_width = 1920
 max_height = 1920
-#image_filter = "lanczos3" # リサイズ時のアルゴリズム
-#image_quality = 90
+image_filter = "lanczos3" # リサイズ時のアルゴリズム
+image_quality = 90
 
 
 [plugin]
