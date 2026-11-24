@@ -1,4 +1,12 @@
 #background-opacity = 0.7
 #background-blur-radius = 20
 
-theme = Ayu Mirage
+#theme = Ayu Mirage
+#theme = Matte Black
+theme = IR Black
+
+#keybind = ctrl+j=ignore
+#
+
+#font-family = "Terminess Nerd Font Mono"
+font-size = 16
